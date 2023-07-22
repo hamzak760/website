@@ -6,7 +6,6 @@ import {CgShoppingCart } from "react-icons/cg";
 import {AiOutlineHeart } from "react-icons/ai";
 
 import Search from "./Search/Search";
-import Cart from "./Cart/Cart";
 import {Context} from "../../utils/context";
 
 import "./Header.scss";
@@ -26,6 +25,7 @@ const Header = () => {
                         <AiOutlineHeart />
                         <span className="cart-icon">
                             <CgShoppingCart />
+                            <span>5</span>
                         </span>
                     </div>
     	         </div>
