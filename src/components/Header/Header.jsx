@@ -12,8 +12,9 @@ import { Context } from "../../utils/context";
 import "./Header.scss";
 
 const Header = () => {
-    const [scrolled, setScrolled] = useState(false);
-    const [showCart, setshowCart] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [showCart, setShowCart] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   const handleScroll = () => {
     const offset = window.scrollY;
     if (offset > 200) {
@@ -37,16 +38,17 @@ const Header = () => {
           </ul>
           <div className="center">JSDEVSTORE</div>
           <div className="right">
-            <TbSearch />
+            <TbSearch onClick={() => setShowSearch(true)} />
             <AiOutlineHeart />
-            <span className="cart-icon" onClick={() => setshowCart(true)}>
+            <span className="cart-icon" onClick={() => setShowCart(true)}>
               <CgShoppingCart />
               <span>5</span>
             </span>
           </div>
         </div>
       </header>
-      {showCart && <Cart setshowCart={setshowCart} />}
+      {showCart && <Cart setshowCart={setShowCart} />}
+      {showSearch && <Search setShowSearch={setShowSearch} />}
     </>
   );
 };
