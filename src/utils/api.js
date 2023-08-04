@@ -1,5 +1,5 @@
 import axios from "axios";
-console.log(process.env)
+
 const params = {
     headers: {
         Authorization: "bearer" + process.env.REACT_APP_STRIPE_APP_KEY,

@@ -9,18 +9,24 @@ import { fetchDataFromApi } from "../../utils/api";
 import { Context } from "../../utils/context";
 
 const Home = () => {
-  const {categories, setCategories} = useContext (Context);
+  const {categories, setCategories, products, setProducts} = useContext (Context);
   useEffect (() => {
+    setProducts();
     getCategories();
   }, [])
 
-  console.log(process.env)
+  const getProducts = () => {
+    fetchDataFromApi("/api/products?populate=*").then((res) => {
+      console.log(res);
+      setProducts(res); 
+    });
+  };
   const getCategories = () => {
     fetchDataFromApi("/api/categories?populate=*").then((res) => {
       console.log(res);
       setCategories(res); 
     });
-  }
+  };
 
   return (
     <div >
