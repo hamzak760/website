@@ -1,17 +1,17 @@
 import axios from "axios";
-
-const params ={
-    headers:{
-        Authorization: "bearer" + ProcessingInstruction.evn.REACT_APP_STRIPE_APP_KEY,
-    }
+console.log(process.env)
+const params = {
+    headers: {
+        Authorization: "bearer" + process.env.REACT_APP_STRIPE_APP_KEY,
+    },
 };
 
 export const fetchDataFromApi = async (url) => {
     try{
         const {data} = await axios.get(process.env.REACT_APP_DEV_URL + params);
-        return data
+        return data;
     } catch (error) {
         console.log(error);
         return error;
     }
-}
+};
