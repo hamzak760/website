@@ -1,4 +1,4 @@
-import { useEffect, useContext } from "react";
+ import { useEffect, useContext } from "react";
 
 import "./Home.scss";
 
@@ -34,7 +34,7 @@ const Home = () => {
       <div className="main-content">
         <div className="layout">
             <Category categories={categories} />
-            <Products headingText="Popular Products"/>
+            <Products products={products} headingText="Popular Products"/>
         </div>
       </div>
       
