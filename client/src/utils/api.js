@@ -11,7 +11,6 @@ export const fetchDataFromApi = async (url) => {
         const {data} = await axios.get(process.env.REACT_APP_DEV_URL + url, params);
         return data;
     } catch (error) {
-        console.log(error);
         return error;
     }
 };
