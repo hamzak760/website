@@ -1,7 +1,6 @@
 import {useNavigate} from "react-router-dom";
 
 import "./Product.scss";
-import prod from "../../../assets/products/earbuds-prod-1.webp";
 
 const Product = ({ id, data }) => {
   const navigate = useNavigate()
