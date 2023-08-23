@@ -4,8 +4,7 @@ import {fetchDataFromApi} from "../utils/api";
 const useFetch = (endpoint) => {
     const [data, setData] = useState([]);
 
-    useEffect( async () =>{
-        const res = await fetchDataFromApi(endpoint)
+    useEffect( () =>{
         makeApiCall();
     },[endpoint]);
 
