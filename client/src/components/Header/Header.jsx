@@ -15,7 +15,7 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-  const {cartCount} = useContext(Context);
+  const { cartCount } = useContext(Context);
   const navigate = useNavigate();
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -38,7 +38,9 @@ const Header = () => {
             <li>About</li>
             <li>Categories</li>
           </ul>
-          <div className="center" onClick={() => navigate("/")}>JSDEVSTORE</div>
+          <div className="center" onClick={() => navigate("/")}>
+            JSDEVSTORE
+          </div>
           <div className="right">
             <TbSearch onClick={() => setShowSearch(true)} />
             <AiOutlineHeart />
